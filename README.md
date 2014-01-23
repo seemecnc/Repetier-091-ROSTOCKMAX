@@ -1,6 +1,6 @@
 # Repetier-Firmware - the fast and user friendly firmware
 
-#for ORION DELTA by SEEMECNC 
+#Pre-Configured for Rostock MAX by SEEMECNC 
 
 Special thanks to the following for getting configurations for the Orion machines:
 
