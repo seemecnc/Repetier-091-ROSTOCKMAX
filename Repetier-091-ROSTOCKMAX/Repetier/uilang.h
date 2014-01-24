@@ -1201,7 +1201,7 @@
 #define UI_TEXT_NOSEL            "\004"
 #define UI_TEXT_PRINT_POS        "Percent Printed:"
 #define UI_TEXT_PRINTING         "Printing"
-#define UI_TEXT_IDLE             "ROSTOCK MAX Ready"
+#define UI_TEXT_IDLE             "ROSTOCKMAX Ready"
 #define UI_TEXT_NOSDCARD         "No SD Card"
 #define UI_TEXT_ERROR            "**** ERROR ****"
 #define UI_TEXT_BACK             "Previous Screen \001"
