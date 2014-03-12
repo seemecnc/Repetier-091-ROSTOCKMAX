@@ -705,8 +705,8 @@ on this endstop.
 
 /** \brief Number of segments to generate for delta conversions per second of move
 */
-#define DELTA_SEGMENTS_PER_SECOND_PRINT 180 // Move accurate setting for print moves
-#define DELTA_SEGMENTS_PER_SECOND_MOVE 70 // Less accurate setting for other moves
+#define DELTA_SEGMENTS_PER_SECOND_PRINT 225 // Move accurate setting for print moves
+#define DELTA_SEGMENTS_PER_SECOND_MOVE 80 // Less accurate setting for other moves
 
 // Delta settings
 #if DRIVE_SYSTEM==3
@@ -810,9 +810,9 @@ Mega. Used only for nonlinear systems like delta or tuga. */
 #define MAX_FEEDRATE_Z 300
 
 /** Home position speed in mm/s. Overridden if EEPROM activated. */
-#define HOMING_FEEDRATE_X 80
-#define HOMING_FEEDRATE_Y 80
-#define HOMING_FEEDRATE_Z 80
+#define HOMING_FEEDRATE_X 120
+#define HOMING_FEEDRATE_Y 120
+#define HOMING_FEEDRATE_Z 120
 
 /** Set order of axis homing. Use HOME_ORDER_XYZ and replace XYZ with your order. */
 #define HOMING_ORDER HOME_ORDER_ZXY
@@ -861,9 +861,9 @@ If the interval at full speed is below this value, smoothing is disabled for tha
 /** \brief X, Y, Z max acceleration in mm/s^2 for printing moves or retracts. Make sure your printer can go that high!
  Overridden if EEPROM activated.
 */
-#define MAX_ACCELERATION_UNITS_PER_SQ_SECOND_X 9000  
-#define MAX_ACCELERATION_UNITS_PER_SQ_SECOND_Y 9000
-#define MAX_ACCELERATION_UNITS_PER_SQ_SECOND_Z 9000
+#define MAX_ACCELERATION_UNITS_PER_SQ_SECOND_X 1850  
+#define MAX_ACCELERATION_UNITS_PER_SQ_SECOND_Y 1850
+#define MAX_ACCELERATION_UNITS_PER_SQ_SECOND_Z 1850
 
 /** \brief X, Y, Z max acceleration in mm/s^2 for travel moves.  Overridden if EEPROM activated.*/
 #define MAX_TRAVEL_ACCELERATION_UNITS_PER_SQ_SECOND_X 3000
@@ -893,8 +893,8 @@ Corner can be printed with full speed of 50 mm/s
 
 Overridden if EEPROM activated.
 */
-#define MAX_JERK 36.0    
-#define MAX_ZJERK 36.0
+#define MAX_JERK 35.0    
+#define MAX_ZJERK 35.0
 
 /** \brief Number of moves we can cache in advance.
 
