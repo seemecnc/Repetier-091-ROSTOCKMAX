@@ -631,7 +631,7 @@ on this endstop.
 
 // Inverting axis direction
 #define INVERT_X_DIR true
-#define INVERT_Y_DIR true
+#define INVERT_Y_DIR false
 #define INVERT_Z_DIR true
 
 //// ENDSTOP SETTINGS:
@@ -930,7 +930,7 @@ is at least molten. After havong some complains that the extruder does not work,
 it 0 as default.
 */
 
-#define MIN_EXTRUDER_TEMP 160
+#define MIN_EXTRUDER_TEMP 0
 
 /** \brief Enable advance algorithm.
 
