@@ -129,6 +129,10 @@ void SDCard::startPrint()
     Printer::setMenuMode(MENU_MODE_SD_PRINTING,true);
     Printer::setMenuMode(MENU_MODE_SD_PAUSED,false);
 }
+
+//##################################################
+//######  THIS IS WHERE THE PAUSE ISSUES WERE AT ###
+
 void SDCard::pausePrint(bool intern)
 {
     if(!sd.sdactive) return;
@@ -138,14 +142,16 @@ void SDCard::pausePrint(bool intern)
     if(intern) {
         Commands::waitUntilEndOfAllBuffers();
         Printer::MemoryPosition();
-#if DRIVE_SYSTEM==3
-        Printer::moveToReal(0,0.4*Printer::yLength,Printer::currentPosition[Z_AXIS],IGNORE_COORDINATE,Printer::maxFeedrate[X_AXIS]);
+#if DRIVE_SYSTEM==3 // which means DELTA
+
+        Printer::moveToReal(Printer::currentPosition[X_AXIS],Printer::currentPosition[Y_AXIS],Printer::currentPosition[Z_AXIS],IGNORE_COORDINATE,Printer::maxFeedrate[X_AXIS]);  // removed 0.4*Printer::yLength in Y position place
 #else
         Printer::moveToReal(Printer::xMin,Printer::yMin+Printer::yLength,Printer::currentPosition[Z_AXIS],IGNORE_COORDINATE,Printer::maxFeedrate[X_AXIS]);
 #endif
     }
 #endif
 }
+
 void SDCard::continuePrint(bool intern)
 {
     if(!sd.sdactive) return;
@@ -154,7 +160,8 @@ void SDCard::continuePrint(bool intern)
     if(intern) {
         Printer::GoToMemoryPosition(true,true,false,true,Printer::maxFeedrate[X_AXIS]);
         Printer::GoToMemoryPosition(false,false,true,false,Printer::maxFeedrate[Z_AXIS]);
-    }
+       
+      }
 #endif
     sdmode = true;
 }
