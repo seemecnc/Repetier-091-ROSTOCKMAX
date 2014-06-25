@@ -749,7 +749,7 @@ on this endstop.
 
 /** \brief Horizontal offset of the universal joints on the vertical carriages.
 */
-#define CARRIAGE_HORIZONTAL_OFFSET 35.0
+#define CARRIAGE_HORIZONTAL_OFFSET 38.4  // Theoretical is 38.4, but actual may be slightly diff. due to plastic injection molded parts shirnkage
 
 /** \brief Printer radius in mm, measured from the center of the print area to the vertical smooth rod.
 */
