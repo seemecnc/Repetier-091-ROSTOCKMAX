@@ -698,7 +698,7 @@ on this endstop.
 
 // Motor Current setting (Only functional when motor driver current ref pins are connected to a digital trimpot on supported boards)
 #if MOTHERBOARD==301
-#define MOTOR_CURRENT {175,175,175,200,0} // Values 0-255 (RAMBO 135 = ~0.75A, 185 = ~1A)
+#define MOTOR_CURRENT {175,175,175,200,0} // Values 0-255 (RAMBO 135 = ~0.75A, 185 = ~1A)  use 140 for xyz and 160 for the E if using Kysan motors and 175 xyz and 200 if using wantai motors
 #elif MOTHERBOARD==12
 #define MOTOR_CURRENT {35713,35713,35713,35713,35713} // Values 0-65535 (3D Master 35713 = ~1A)
 #endif
