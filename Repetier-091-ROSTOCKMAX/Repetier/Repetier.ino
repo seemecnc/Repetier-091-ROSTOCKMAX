@@ -2,9 +2,9 @@
 
 
 
-experimental 0.91 firmware for ROSTOCK MAX
+0.91 firmware for ROSTOCK MAX v2
 
-
+2/16/2015 changed all instances of prog_char to char in ui.cpp to make compatible with arduino 1.6 gcc compiler per GeneB's input
 
 
     This file is part of Repetier-Firmware.

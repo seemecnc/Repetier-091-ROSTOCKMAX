@@ -4,7 +4,7 @@
     Repetier-Firmware is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
     the Free Software Foundation, either version 3 of the License, or
-    (at your option) any later version.
+    (at your option) any later.
 
     Repetier-Firmware is distributed in the hope that it will be useful,
     but WITHOUT ANY WARRANTY; without even the implied warranty of
@@ -1201,7 +1201,7 @@
 #define UI_TEXT_NOSEL            "\004"
 #define UI_TEXT_PRINT_POS        "Percent Printed:"
 #define UI_TEXT_PRINTING         "Printing"
-#define UI_TEXT_IDLE             "ROSTOCKMAX Ready"
+#define UI_TEXT_IDLE             "ROSTOCKMAX OK"
 #define UI_TEXT_NOSDCARD         "No SD Card"
 #define UI_TEXT_ERROR            "**** ERROR ****"
 #define UI_TEXT_BACK             "Previous Screen \001"
@@ -1340,7 +1340,7 @@
 #define UI_TEXT_FLOW_MULTIPLY     "Flow Mul.:%of%%%"
 #define UI_TEXT_EXTR_WAIT_RETRACT_TEMP  "Wait Temp.%XT\002C"
 #define UI_TEXT_EXTR_WAIT_RETRACT_UNITS "Wait Units:%XUmm"
-#define UI_TEXT_PRINTER_READY    "ROSTOCK MAX ready"
+#define UI_TEXT_PRINTER_READY    "ROSTOCK MAX OK"
 // Printtime output gets aggregated like <Days_5gisgits>UI_TEXT_PRINTTIME_DAYS<Hours>UI_TEXT_PRINTTIME_HOURS<Minutes>UI_TEXT_PRINTTIME_MINUTES
 // ___88 days 12:45
 #define UI_TEXT_PRINTTIME_DAYS   " days "

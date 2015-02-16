@@ -117,10 +117,10 @@ bool UIMenuEntry::showEntry() const
 {
     bool ret = true;
     uint8_t f,f2;
-    f = HAL::readFlashByte((const prog_char*)&filter);
+    f = HAL::readFlashByte((const char*)&filter);
     if(f!=0)
         ret = (f & Printer::menuMode) != 0;
-    f2 = HAL::readFlashByte((const prog_char*)&nofilter);
+    f2 = HAL::readFlashByte((const char*)&nofilter);
     if(ret && f2!=0)
     {
         ret = (f2 & Printer::menuMode) == 0;
@@ -1949,7 +1949,7 @@ void UIDisplay::adjustMenuPos()
     if(menuLevel == 0) return;
     UIMenu *men = (UIMenu*)menu[menuLevel];
     UIMenuEntry **entries = (UIMenuEntry**)pgm_read_word(&(men->entries));
-    uint8_t mtype = HAL::readFlashByte((const prog_char*)&(men->menuType));
+    uint8_t mtype = HAL::readFlashByte((const char*)&(men->menuType));
     if(mtype != 2) return;
     while(menuPos[menuLevel]>0)
     {
@@ -2012,11 +2012,11 @@ void UIDisplay::nextPreviousAction(int8_t next)
     }
     UIMenu *men = (UIMenu*)menu[menuLevel];
     uint8_t nr = pgm_read_word_near(&(men->numEntries));
-    uint8_t mtype = HAL::readFlashByte((const prog_char*)&(men->menuType));
+    uint8_t mtype = HAL::readFlashByte((const char*)&(men->menuType));
     UIMenuEntry **entries = (UIMenuEntry**)pgm_read_word(&(men->entries));
     UIMenuEntry *ent =(UIMenuEntry *)pgm_read_word(&(entries[menuPos[menuLevel]]));
     UIMenuEntry *testEnt;
-    uint8_t entType = HAL::readFlashByte((const prog_char*)&(ent->menuType));// 0 = Info, 1 = Headline, 2 = submenu ref, 3 = direct action command
+    uint8_t entType = HAL::readFlashByte((const char*)&(ent->menuType));// 0 = Info, 1 = Headline, 2 = submenu ref, 3 = direct action command
     int action = pgm_read_word(&(ent->action));
     if(mtype==2 && activeAction==0)   // browse through menu items
     {
