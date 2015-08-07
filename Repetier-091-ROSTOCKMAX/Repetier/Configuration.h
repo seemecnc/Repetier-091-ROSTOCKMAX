@@ -575,8 +575,8 @@ A good start is 30 lower then the optimal value. You need to leave room for cool
 #define MAXTEMP 247
 
 /** Extreme values to detect defect thermistors. */
-#define MIN_DEFECT_TEMPERATURE -10
-#define MAX_DEFECT_TEMPERATURE 290
+#define MIN_DEFECT_TEMPERATURE 10
+#define MAX_DEFECT_TEMPERATURE 270
 
 
 // ##########################################################################################
