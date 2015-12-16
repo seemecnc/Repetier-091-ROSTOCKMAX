@@ -1150,11 +1150,14 @@ The following settings override uiconfig.h!
 10 = Gadgets3D shield on RAMPS 1.4, see http://reprap.org/wiki/RAMPS_1.3/1.4_GADGETS3D_Shield_with_Panel
 11 = RepRapDiscount Full Graphic Smart Controller
 12 = FELIXPrinters Controller
-13 = SeeMeCNC Display on Rambo (ORION)
+13 = SeeMeCNC 20x4 LCD Display w/RAMBo Board
 
 */
 #define FEATURE_CONTROLLER 13
-
+// set rotation of encoder  0 for right/down   1 for left/down
+#define ENCODER_DIRECTION 1
+//###  If you have a white RepRapDiscount LCD controller prob use 1.  If you have a red generic LCD controller prob use 2  Value should be 0 (fastest) 1 or 2 (slowest) ###
+#define UI_ENCODER_SPEED 2
 /**
 Select the language to use.
 0 = English
@@ -1190,11 +1193,10 @@ info pages with next/previous button/click-encoder */
 
 #define FEATURE_UI_KEYS 0
 
-/* Normally cou want a next/previous actions with every click of your encoder.
+/* Normally you want a next/previous actions with every click of your encoder.
 Unfotunately, the encoder have a different count of phase changes between clicks.
 Select an encoder speed from 0 = fastest to 2 = slowest that results in one menu move per click.
 */
-#define UI_ENCODER_SPEED 1
 
 /* There are 2 ways to change positions. You can move by increments of 1/0.1 mm resulting in more menu entries
 and requiring many turns on your encode. The alternative is to enable speed dependent positioning. It will change

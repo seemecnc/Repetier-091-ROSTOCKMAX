@@ -978,8 +978,15 @@ void ui_check_slow_keys(int &action) {}
 #define UI_DISPLAY_D5_PIN      73
 #define UI_DISPLAY_D6_PIN      74
 #define UI_DISPLAY_D7_PIN      75
+// setting encoder direction in configuration.h 
+#if ENCODER_DIRECTION==0
 #define UI_ENCODER_A           77
 #define UI_ENCODER_B           76
+#else
+#define UI_ENCODER_A           76
+#define UI_ENCODER_B           77
+#endif
+//
 #define UI_ENCODER_CLICK       78
 #define UI_KILL_PIN            80
 #define UI_DELAYPERCHAR 320
