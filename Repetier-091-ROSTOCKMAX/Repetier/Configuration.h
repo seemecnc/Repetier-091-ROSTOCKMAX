@@ -679,9 +679,9 @@ on this endstop.
 // For delta robot Z_MAX_LENGTH is the maximum travel of the towers and should be set to the distance between the hotend
 // and the platform when the printer is at its home position.
 // If EEPROM is enabled these values will be overidden with the values in the EEPROM
-#define X_MAX_LENGTH 250
-#define Y_MAX_LENGTH 250
-#define Z_MAX_LENGTH 234.66
+#define X_MAX_LENGTH 350.0
+#define Y_MAX_LENGTH 350.0
+#define Z_MAX_LENGTH 350.0
 
 // Coordinates for the minimum axis. Can also be negative if you want to have the bed start at 0 and the printer can go to the left side
 // of the bed. Maximum coordinate is given by adding the above X_MAX_LENGTH values.
@@ -698,7 +698,7 @@ on this endstop.
 
 // Motor Current setting (Only functional when motor driver current ref pins are connected to a digital trimpot on supported boards)
 #if MOTHERBOARD==301
-#define MOTOR_CURRENT {175,175,175,200,0} // Values 0-255 (RAMBO 135 = ~0.75A, 185 = ~1A)  use 140 for xyz and 160 for the E if using Kysan motors and 175 xyz and 200 if using wantai motors
+#define MOTOR_CURRENT {140,140,140,130,0} // Values 0-255 (RAMBO 135 = ~0.75A, 185 = ~1A)  use 140 for xyz and 130 for the E if using Kysan motors and 175 xyz and 200 if using wantai motors
 #elif MOTHERBOARD==12
 #define MOTOR_CURRENT {35713,35713,35713,35713,35713} // Values 0-65535 (3D Master 35713 = ~1A)
 #endif
@@ -712,7 +712,7 @@ on this endstop.
 #if DRIVE_SYSTEM==3
 /** \brief Delta rod length
 */
-#define DELTA_DIAGONAL_ROD 269.0 // mm
+#define DELTA_DIAGONAL_ROD 290.8 // 290.8 is for the new ball cup arms and the older spring u joint style is 269.0
 
 
 /*  =========== Parameter essential for delta calibration ===================
@@ -745,15 +745,15 @@ on this endstop.
 
 /** \brief Horizontal offset of the universal joints on the end effector (moving platform).
 */
-#define END_EFFECTOR_HORIZONTAL_OFFSET 33.0
+#define END_EFFECTOR_HORIZONTAL_OFFSET 30.22  // 33.0 for old 1/8" axle and u joint style platforms
 
 /** \brief Horizontal offset of the universal joints on the vertical carriages.
 */
-#define CARRIAGE_HORIZONTAL_OFFSET 38.4  // Theoretical is 38.4, but actual may be slightly diff. due to plastic injection molded parts shirnkage
+#define CARRIAGE_HORIZONTAL_OFFSET 27.1  //  27.075 is calculated for new molded carriagges  38.4 is for the old lasercut melamine trucks w/608zz bearings
 
 /** \brief Printer radius in mm, measured from the center of the print area to the vertical smooth rod.
 */
-#define PRINTER_RADIUS 198.25
+#define PRINTER_RADIUS 200.0  //  198.25 for older v1 machines.  
 
 /**  \brief Horizontal distance bridged by the diagonal push rod when the end effector is in the center. It is pretty close to 50% of the push rod length (250 mm).
 */
