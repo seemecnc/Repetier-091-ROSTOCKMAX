@@ -141,9 +141,9 @@ void SDCard::pausePrint(bool intern)
 #if FEATURE_MEMORY_POSITION
     if(intern) {
         Commands::waitUntilEndOfAllBuffers();
-		delay(200);
-        Printer::MemoryPosition(); 
-        Printer::moveTo(Printer::destinationSteps[X_AXIS] = 0,Printer::destinationSteps[Y_AXIS] = 0,Printer::zLength,IGNORE_COORDINATE,Printer::homingFeedrate[Z_AXIS]);
+		//delay(200);
+        //Printer::MemoryPosition(); 
+        Printer::moveTo(IGNORE_COORDINATE,IGNORE_COORDINATE,IGNORE_COORDINATE,IGNORE_COORDINATE,IGNORE_COORDINATE);
           
  }
 #endif
@@ -153,9 +153,11 @@ void SDCard::continuePrint(bool intern)
 {
     if(!sd.sdactive) return;
     Printer::setMenuMode(MENU_MODE_SD_PAUSED,false);
+/*    
 #if FEATURE_MEMORY_POSITION
         Printer::GoToMemoryPosition(Printer::memoryX,Printer::memoryY,Printer::memoryZ,false,Printer::homingFeedrate[X_AXIS]);    
 #endif
+*/
     sdmode = true;
 }
 void SDCard::stopPrint()
