@@ -2,6 +2,8 @@
 
 #Pre-Configured for Rostock MAX by SEEMECNC 
 
+# Visit seemecnc.com for documentation under the menu tab SUPPORT > ARCHIVE
+
 Special thanks to the following for getting configurations for the Orion machines:
 
 in2str
